@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/630863de31.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="contacts.css" />
+    <title>Rendra Kusuma B.</title>
+  </head>
+  <body>
+    <div class="container-nav">
+      <div class="nav-circle"></div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="container">
+      <h1>Contact me! Click below!</h1>
+      <div class="anim-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="https://github.com/MainLah"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/kusuma.blikololo"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/rendrakusumab/"
+              ><i class="fa-brands fa-instagram insta"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-inbox"></i></a>
+          </li>
+        </ul>
+        <button class="icon">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </button>
+      </div>
+    </div>
+    <div class="nav-icons">
+      <h3 class="nav">
+        <a href="../index.html"><i class="fa-solid fa-house-chimney"></i></a>
+      </h3>
+      <h3 class="nav"><a href="../About/about.html">About</a></h3>
+      <h3 class="nav"><a href="../Works/works.html">Works</a></h3>
+      <h3 class="nav"><a href="#">Contacts</a></h3>
+    </div>
+
+    <script src="https://unpkg.com/starback@2.0.1/dist/starback.js"></script>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const starback = new Starback(canvas, {
+        type: "dot",
+        quantity: 200,
+        direction: 50,
+        backgroundColor: ["#3498db00"],
+        randomOpacity: true,
+        starColor: "#faebd7",
+      });
+    </script>
+    <script src="contacts.js"></script>
+  </body>
+</html>

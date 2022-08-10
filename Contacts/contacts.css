@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+  --white: #fff;
+  --cream: #faebd7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--cream);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  border: none;
+  background-color: var(--cream);
+  width: 40px;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  transform: translateX(-10%);
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  display: none;
+  padding-inline: 1.15rem;
+}
+
+#canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.container {
+  background-color: var(--white);
+  height: 100vh;
+  width: 100vw;
+  transform-origin: top left;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  margin-bottom: 2rem;
+}
+
+.anim-nav {
+  height: 75px;
+  width: 75px;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 2px black;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.anim-nav.active {
+  width: 400px;
+  transition: all 0.5s;
+}
+
+.anim-nav.active li {
+  display: block;
+}
+
+.anim-nav.active button {
+  width: 20px;
+}
+
+.icon {
+  height: 20px;
+  position: relative;
+  transform: translateX(-17.5px);
+  cursor: pointer;
+}
+
+.line {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+
+.line1 {
+  position: absolute;
+  top: 15px;
+  transition: all 0.5s;
+}
+
+.line2 {
+  position: absolute;
+  bottom: 15px;
+  transition: all 0.5s;
+}
+
+.anim-nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(-8.5px);
+  transition: all 0.5s;
+}
+
+.anim-nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(8.5px);
+  transition: all 0.5s;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+.show-nav {
+  transform: rotate(-15deg);
+}
+
+.container-nav {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index: 1000;
+}
+
+.nav-circle {
+  background-color: violet;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 1000 !important;
+  animation: scaling infinite 1.5s ease-in-out;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.nav-item:nth-child(1) {
+  position: absolute;
+  bottom: 400px;
+  left: 60px;
+  font-size: 24px;
+}
+
+.nav-item:nth-child(2) {
+  position: absolute;
+  bottom: 300px;
+  left: 75px;
+}
+
+.nav-item:nth-child(3) {
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+}
+
+.nav-item:nth-child(4) {
+  position: absolute;
+  bottom: 100px;
+  left: 105px;
+}
+
+.nav {
+  position: absolute;
+  left: -100px;
+}
+
+.nav-item {
+  transition: 0.5s left;
+}
+
+.nav-list li a i {
+  font-size: 24px;
+  padding-inline: 0.75rem;
+  color: black;
+}
+
+.insta {
+  font-size: 25px !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .nav {
+    font-size: 14px;
+  }
+
+  .nav-item:nth-child(1) {
+    bottom: 300px;
+    left: 25px;
+  }
+
+  .nav-item:nth-child(2) {
+    bottom: 210px;
+    left: 45px;
+  }
+
+  .nav-item:nth-child(3) {
+    bottom: 120px;
+    left: 70px;
+  }
+
+  .nav-item:nth-child(4) {
+    bottom: 30px;
+    left: 80px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .anim-nav.active {
+    width: 300px;
+  }
+
+  .anim-nav.active ul li i {
+    padding-inline: 0;
+  }
+}
